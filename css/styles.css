@@ -1,0 +1,414 @@
+/* #2587DB */
+/* #F15D5B */
+/* #F4D031 */
+/* #F6F6F6 */
+/* #949494 */
+
+
+@import url('reset.css');
+@import url('https://use.typekit.net/qgz8ebf.css');
+
+body{
+  font-family: "futura-pt", sans-serif;
+  font-size: 18px;
+  line-height: 23px
+}
+a{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+i{margin-right: 10px; font-size: 18px}
+h1,h2,h3,h4{
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700
+}
+h1, h2{position: relative; z-index: 2}
+h1::after, h2::after{
+  content: 'O';
+  display: block;
+  color: #F4D031;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1
+}
+h1{font-size: 30px; line-height: 38px}
+h1::after{font-size: 140px}
+h2{font-size: 24px; line-height: 31px}
+h2::after{font-size: 100px}
+h3{font-size: 20px; line-height: 26px}
+h4{margin-bottom: 15px}
+section{margin: 80px 0}
+header, footer{font-size: 16px}
+
+header{
+  background: green;
+  height: 114px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 999999999
+}
+
+header > div{width: 100%}
+
+header input{
+  position: absolute;
+  cursor: pointer;
+  opacity: 0
+}
+header label{
+  display:flex;
+  flex-direction:column;
+  width:40px;
+  cursor:pointer;
+}
+
+header label span{
+background: #0A0A0A;
+height:5px;
+margin: 4px 0;
+transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+header span:nth-of-type(1){width:100%}
+header span:nth-of-type(2){width:100%}
+header span:nth-of-type(3){width:100%}
+
+header input[type="checkbox"]{display:none}
+
+header input[type="checkbox"]:checked ~ span:nth-of-type(1){
+transform-origin:bottom;
+width: 50%;
+transform:rotatez(45deg) translate(6px,0px)
+}
+
+header input[type="checkbox"]:checked ~ span:nth-of-type(2){
+transform-origin:top;
+transform:rotatez(-45deg)
+}
+
+header input[type="checkbox"]:checked ~ span:nth-of-type(3){
+transform-origin:bottom;
+width:50%;
+transform: translate(18px,-7px) rotatez(45deg);
+}
+
+#nav-2{
+  flex-direction: column;
+  padding: 50px 0 40px;
+  display: none;
+  background: #666
+}
+  header .rs{margin: 0 auto 40px}
+    header .rs i{color: #F15D5B}
+
+
+
+#nav-1{
+  flex-direction: column;
+  display: none;
+  background: #666;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 328px;
+  margin-top: 40px
+}
+
+#nav-1.show, #nav-2.show{display: flex}
+
+main{background: url('../img/vox-motifs.svg') no-repeat center}
+  #actus{
+    position: relative;
+    margin: inherit
+  }
+    .owl-dots{
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0
+    }
+    .owl-nav{
+      position: absolute;
+      top: 19%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      margin : 0 20px !important
+    }
+      .owl-prev{transform: rotate(180deg)}
+      .owl-prev,.owl-next{position: relative}
+      .owl-prev::after, .owl-next::after{
+        content: '';
+        display: block;
+        width: 45px;
+        height: 45px;
+        background: #F15D5B;
+        position: absolute;
+        top: -14px;
+        left: -20px;
+        z-index: -2;
+        border: 2px solid #F15D5B;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px
+      }
+      .owl-prev:active:after, .owl-next:active:after{background: #fff}
+      .owl-stage-outer{z-index: -2}
+      .owl-theme .owl-nav [class*=owl-]:hover {background: inherit !important}
+      .owl-dot.active span{background: #F15D5B !important}
+    #actus figcaption{
+      background: #2587DB;
+      padding: 20px 0 50px
+    }
+    #actus figcaption div p{margin: 10px 0 20px}
+
+    #nouveautes{text-align: center}
+      #nouveautes h2::after{left: -135px}
+        #n-film figure{width: 220px; margin: 40px 0}
+        #n-film a h3{color: #000; text-align: left}
+        #n-film figcaption{margin-top: 10px}
+
+    #newsletter{padding: 60px 0}
+      #newsletter h2{text-align: center}
+      #newsletter h2::after{left: -121px}
+      #newsletter p{
+        margin: 40px 0 30px;
+        font-size: 22px;
+        line-height: 29px;
+        font-weight: 500
+      }
+      input[type="email"]{
+        padding: 18px 22px;
+        width: 100%;
+        border: inherit;
+        font-size: 18px;
+        font-family: 'futura-pt', sans-serif
+      }
+      input[type="submit"]{
+        background: #F15D5B;
+        margin-top: 10px;
+        padding: 16px 20px;
+        width: 200px;
+        height: 68px;
+        border: 2px solid #F15D5B;
+        font-size: 16px;
+        font-family: 'futura-pt', sans-serif;
+        text-transform: uppercase;
+        font-weight: 500
+      }
+      input[type="submit"]:active{background: #fff; color : #F15D5B}
+
+      #appli{background: #F6F6F6; padding: 1px 0}
+      #appli h2::after{left: -32px}
+      #appli figure {flex-direction: column-reverse}
+      #appli figure.max-width{max-width: inherit; margin: inherit}
+        #appli img{margin-top: 25px}
+        #appli p{margin: 40px 0 20px}
+
+      footer{
+        background: #F6F6F6;
+        padding: 60px 0 10px;
+        font-weight: 500
+      }
+        footer img{display: block; margin: 0 auto 25px}
+        footer a{color: #000}
+        footer li{margin: 10px 0}
+        footer article p{margin: 10px 0}
+        .rs{width: 182px; flex-direction: row}
+          .rs i{font-size: 40px}
+        footer div{margin-bottom: 40px}
+          footer div nav, footer div article{margin: 15px 0; max-width: 272px}
+        #copyright{font-size: 14px; text-align: center}
+          #copyright a{display: block}
+    .btn-primary{
+      background: #F15D5B;
+      padding: 14px 20px;
+      border: 2px solid #F15D5B;
+      display: inline-block
+    }
+    .btn-primary:active{
+      background: #fff;
+      color : #F15D5B;
+    }
+    .btn-menu-p{padding: 14px 15%; background: #F15D5B; border: 2px solid #F15D5B; width: 100%; display: block}
+    .btn-menu-p:active{background: #F6F6F6; color: #F15D5B}
+    .btn-menu-s{padding: 14px 15%; background: #F6F6F6; border: 2px solid #F15D5B; color: #F15D5B}
+    .btn-menu-s:active{background: #F15D5B; color: #F6F6F6}
+
+    #nav-1 .btn-menu-p{background: #F6F6F6; border: 2px solid #F6F6F6; color: #000}
+      #nav-1 .btn-menu-p i{color: #2587DB}
+
+    .btn-sous_menu{width: 80%; margin: 0 auto}
+    #sous-menu{display: none}
+    #sous-menu.show{display: block}
+
+    #btn-infos.active, #btn-infos i.active, #nav-1 .btn-menu-p:active, #nav-1 .btn-menu-p:active i{background: #F15D5B; color: #fff; border: 2px solid #F15D5B}
+    .btn-hide.hide{display: none !important}
+
+.hide{display: none}
+.pegi{margin-left: 5px}
+.affiche-hover{display: none}
+
+.max-width{
+  max-width: 302px;
+  margin: 0 auto
+}
+
+.b-bleu{background: #2587DB}
+.f-blanc{color: #fff}
+
+.flex{display: flex}
+.wrap{flex-wrap: wrap}
+.item-100{flex-basis: 100%}
+.between{justify-content: space-between}
+.center{justify-content: center}
+.align-center{align-items: center}
+
+
+@media screen and (min-width:720px) {
+body{background: #949494}
+
+h1{font-size: 40px; line-height: 51px}
+h2{font-size: 30px; line-height: 38px}
+h2::after{font-size: 140px}
+h3{font-size: 24px; line-height: 31px}
+
+.max-width{max-width: 672px}
+
+.owl-nav{top: 42%}
+
+.owl-prev:hover:after, .owl-next:hover:after{background: #fff}
+
+#nouveautes h2::after {left: -169px}
+
+#n-film{
+  align-items: inherit;
+  margin-top: 40px
+}
+  #n-film figure{
+    width: inherit;
+    margin: 40px auto 0;
+    flex-basis: 34%
+  }
+    #n-film figcaption{width: 220px}
+
+    input[type="email"]{width: 414px}
+    input[type="submit"]{height: 60px; margin-top: inherit}
+
+    #newsletter h2::after{left: -153px}
+    #newsletter p, #newsletter form{text-align: center}
+
+    input[type="submit"]{margin-left: 10px}
+
+
+    #appli{padding: 80px 0}
+    #appli h2::after {left: -46px}
+    #appli figure.max-width {
+    max-width: 672px;
+    margin: 0 auto
+    }
+
+    #copyright a {display: inline}
+
+}
+
+
+@media screen and (min-width:960px) {
+  body{background: #666}
+
+  a:hover{color: #F15D5B}
+
+  footer a:hover{color: #F15D5B}
+
+  .max-width{max-width: 1282px}
+
+  #actus figure{position: relative}
+    #actus figcaption{
+      background: rgba(37, 135, 219, 0.8);
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      width: 526px;
+      padding: 20px 40px 50px
+    }
+
+    #n-film figure{flex-basis: inherit}
+    #n-film a h3:hover{color: #F15D5B}
+
+    #appli figure{flex-direction: row-reverse}
+    #appli figure.max-width {max-width: 1282px}
+    #appli figcaption.max-width{max-width: inherit; margin: inherit}
+
+    .btn-primary:hover{
+      background: #fff;
+      color : #F15D5B;
+    }
+
+    .owl-dot:hover span {background: #F15D5B !important}
+
+    input[type="submit"]:hover{background: #fff; color : #F15D5B}
+
+    .affiche-film{position: relative}
+    .affiche-hover{
+      display: block;
+      width: 219px;
+      height: 310px;
+      background: linear-gradient(0deg, rgba(37,135,219,1) 0%, rgba(37,135,219,1) 0%, rgba(37,135,219,0) 100%);
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      z-index: -1
+    }
+    .affiche-hover a{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #F15D5B;
+      padding: 14px 20px;
+      margin: 20px 25px;
+      border: 2px solid #F15D5B
+    }
+    .affiche-hover a:hover{background: #fff}
+    .btn-affiche.o{z-index: 1}
+    .affiche-hover.show-o {opacity: 1; z-index: 2}
+
+    .affiche-hover, .btn-primary, a, .owl-prev::after, .owl-next::after,  input[type="submit"], #n-film a h3{transition: all 0.3s ease}
+
+    header label{display: none}
+
+    .rs{width: 80px}
+      .rs i{font-size: 20px}
+
+    header{justify-content: space-between}
+      header > div{display: inherit !important; flex-basis: 20%; max-width: inherit !important; margin: inherit !important;}
+
+      #nav-1, #nav-2{display: flex}
+      #nav-2{
+        flex-basis: 40%;
+        flex-direction: row;
+        padding: 0
+      }
+      header nav{flex-basis: 100%; max-width: 1282px; margin: 0 auto}
+
+      #nav-1{
+        flex-direction: row;
+        top: inherit;
+        margin-top: inherit;
+        position: inherit;
+        margin-top: 16px;
+      }
+}
+
+/* #2587DB */
+/* #F15D5B */
+/* #F4D031 */
+/* #F6F6F6 */
+/* #949494 */
