@@ -23,6 +23,7 @@
   #prochainement .btn-primary{padding: 14px 17px; order: 3}
 
 @media screen and (min-width:720px) {
+  main{background: url('../img/vox-motifs_films.svg') no-repeat center}
   .owl-nav{left: -7%; right: -7%}
 
   .debut-section{flex-direction: row; flex-wrap: wrap; justify-content: space-between}
