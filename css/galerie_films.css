@@ -1,0 +1,40 @@
+@import url('styles.css');
+
+.disabled {opacity: 0 !important; transition: all 0.3s ease}
+.owl-prev{transition: all 0.3s ease}
+.owl-nav{top: 32%; left: -20%; right: -20%}
+.item{width: 219px; margin: 0 auto}
+
+#avant-premieres{margin: 80px auto 0}
+  #avant-premieres h2::after{left: -33px}
+  #avant-premieres figure{margin: 40px 0 0 42px}
+
+#avant-premieres figcaption a, .item figcaption a{color: #000}
+.item figcaption, #avant-premieres figcaption{margin-top: 10px}
+
+.owl-carousel{margin: 40px 0}
+.debut-section{flex-direction: column}
+
+#a-affiche{padding: 80px 0}
+  #a-affiche h2::after{left: -32px}
+  #a-affiche .btn-primary{padding: 14px 19px; order: 3}
+
+  #prochainement h2::after{left: -35px}
+  #prochainement .btn-primary{padding: 14px 17px; order: 3}
+
+@media screen and (min-width:720px) {
+  .owl-nav{left: -7%; right: -7%}
+
+  .debut-section{flex-direction: row; flex-wrap: wrap; justify-content: space-between}
+
+  #avant-premieres h2::after, #a-affiche h2::after{left: -47px}
+
+  #a-affiche h2::after, #prochainement h2::after{top: 8px}
+
+  #a-affiche .btn-primary{width: 302px; order: inherit}
+  #a-affiche h2, #prochainement h2{display: flex; align-items: center}
+  #prochainement h2::after{left: -50px}
+  #prochainement .btn-primary{order: inherit}
+
+  #avant-premieres figcaption a:hover, .item figcaption a:hover{color: #F15D5B}
+}
