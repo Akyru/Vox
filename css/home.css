@@ -1,0 +1,68 @@
+@import url('styles.css');
+
+#actus{
+  position: relative;
+  margin: inherit
+}
+
+#actus figcaption{
+  background: #2587DB;
+  padding: 20px 0 50px
+}
+#actus figcaption div p{margin: 10px 0 20px}
+
+#nouveautes{text-align: center}
+  #nouveautes h2::after{left: -135px}
+    #n-film figure{width: 220px; margin: 40px 0}
+    #n-film a h3{color: #000; text-align: left}
+    #n-film figcaption{margin-top: 10px}
+
+    #appli{background: #F6F6F6; padding: 1px 0}
+    #appli h2::after{left: -32px}
+    #appli figure {flex-direction: column-reverse}
+    #appli figure.max-width{max-width: inherit; margin: inherit}
+      #appli img{margin-top: 25px}
+      #appli p{margin: 40px 0 20px}
+
+      @media screen and (min-width:720px) {
+
+      #nouveautes h2::after {left: -169px}
+
+      #n-film{
+        align-items: inherit;
+        margin-top: 40px
+      }
+        #n-film figure{
+          width: inherit;
+          margin: 40px auto 0;
+          flex-basis: 34%
+        }
+          #n-film figcaption{width: 220px}
+
+          #appli{padding: 80px 0}
+          #appli h2::after {left: -46px}
+          #appli figure.max-width {
+          max-width: 672px;
+          margin: 0 auto
+          }
+      }
+
+
+      @media screen and (min-width:960px) {
+        #actus figure{position: relative}
+          #actus figcaption{
+            background: rgba(37, 135, 219, 0.8);
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            width: 526px;
+            padding: 20px 40px 50px
+          }
+
+          #n-film figure{flex-basis: inherit}
+          #n-film a h3:hover{color: #F15D5B}
+
+          #appli figure{flex-direction: row-reverse}
+          #appli figure.max-width {max-width: 1282px}
+          #appli figcaption.max-width{max-width: inherit; margin: inherit}
+      }

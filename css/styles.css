@@ -123,10 +123,7 @@ transform: translate(18px,-7px) rotatez(45deg);
 #nav-1.show, #nav-2.show{display: flex}
 
 main{background: url('../img/vox-motifs.svg') no-repeat center}
-  #actus{
-    position: relative;
-    margin: inherit
-  }
+
     .owl-dots{
       position: absolute;
       bottom: 10px;
@@ -143,8 +140,8 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
       margin : 0 20px !important
     }
       .owl-prev{transform: rotate(180deg)}
-      .owl-prev,.owl-next{position: relative}
-      .owl-prev::after, .owl-next::after{
+      .owl-prev,.owl-next, .btn-retour{position: relative}
+      .owl-prev::after, .owl-next::after, .btn-retour::after{
         content: '';
         display: block;
         width: 45px;
@@ -159,21 +156,14 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px
       }
-      .owl-prev:active:after, .owl-next:active:after{background: #fff}
+      .btn-retour::after{
+        top: -16px;
+        left: -13px
+      }
+      .owl-prev:active:after, .owl-next:active:after, .btn-retour:active:after{background: #fff}
       .owl-stage-outer{z-index: -2}
       .owl-theme .owl-nav [class*=owl-]:hover {background: inherit !important}
       .owl-dot.active span{background: #F15D5B !important}
-    #actus figcaption{
-      background: #2587DB;
-      padding: 20px 0 50px
-    }
-    #actus figcaption div p{margin: 10px 0 20px}
-
-    #nouveautes{text-align: center}
-      #nouveautes h2::after{left: -135px}
-        #n-film figure{width: 220px; margin: 40px 0}
-        #n-film a h3{color: #000; text-align: left}
-        #n-film figcaption{margin-top: 10px}
 
     #newsletter{padding: 60px 0}
       #newsletter h2{text-align: center}
@@ -205,13 +195,6 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
       }
       input[type="submit"]:active{background: #fff; color : #F15D5B}
 
-      #appli{background: #F6F6F6; padding: 1px 0}
-      #appli h2::after{left: -32px}
-      #appli figure {flex-direction: column-reverse}
-      #appli figure.max-width{max-width: inherit; margin: inherit}
-        #appli img{margin-top: 25px}
-        #appli p{margin: 40px 0 20px}
-
       footer{
         background: #F6F6F6;
         padding: 60px 0 10px;
@@ -227,6 +210,7 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
           footer div nav, footer div article{margin: 15px 0; max-width: 272px}
         #copyright{font-size: 14px; text-align: center}
           #copyright a{display: block}
+
     .btn-primary{
       background: #F15D5B;
       padding: 14px 20px;
@@ -251,6 +235,11 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
 
     #btn-infos.active, #btn-infos i.active, #nav-1 .btn-menu-p:active, #nav-1 .btn-menu-p:active i{background: #F15D5B; color: #fff; border: 2px solid #F15D5B}
     .btn-hide.hide{display: none !important}
+
+    .btn-retour{margin: 0 auto}
+    .btn-retour:hover:active i{color: #F15D5B}
+
+    #intro{margin: 40px auto}
 
 .hide{display: none}
 .pegi{margin-left: 5px}
@@ -284,21 +273,6 @@ h3{font-size: 24px; line-height: 31px}
 
 .owl-nav{top: 42%}
 
-.owl-prev:hover:after, .owl-next:hover:after{background: #fff}
-
-#nouveautes h2::after {left: -169px}
-
-#n-film{
-  align-items: inherit;
-  margin-top: 40px
-}
-  #n-film figure{
-    width: inherit;
-    margin: 40px auto 0;
-    flex-basis: 34%
-  }
-    #n-film figcaption{width: 220px}
-
     input[type="email"]{width: 414px}
     input[type="submit"]{height: 60px; margin-top: inherit}
 
@@ -306,14 +280,6 @@ h3{font-size: 24px; line-height: 31px}
     #newsletter p, #newsletter form{text-align: center}
 
     input[type="submit"]{margin-left: 10px}
-
-
-    #appli{padding: 80px 0}
-    #appli h2::after {left: -46px}
-    #appli figure.max-width {
-    max-width: 672px;
-    margin: 0 auto
-    }
 
     #copyright a {display: inline}
 
@@ -329,27 +295,13 @@ h3{font-size: 24px; line-height: 31px}
 
   .max-width{max-width: 1282px}
 
-  #actus figure{position: relative}
-    #actus figcaption{
-      background: rgba(37, 135, 219, 0.8);
-      position: absolute;
-      bottom: 10%;
-      left: 5%;
-      width: 526px;
-      padding: 20px 40px 50px
-    }
-
-    #n-film figure{flex-basis: inherit}
-    #n-film a h3:hover{color: #F15D5B}
-
-    #appli figure{flex-direction: row-reverse}
-    #appli figure.max-width {max-width: 1282px}
-    #appli figcaption.max-width{max-width: inherit; margin: inherit}
-
     .btn-primary:hover{
       background: #fff;
       color : #F15D5B;
     }
+
+    .owl-prev:hover:after, .owl-next:hover:after, .btn-retour:hover:after {background: #fff}
+    .btn-retour:hover:after i{color: #F15D5B}
 
     .owl-dot:hover span {background: #F15D5B !important}
 
@@ -380,7 +332,7 @@ h3{font-size: 24px; line-height: 31px}
     .btn-affiche.o{z-index: 1}
     .affiche-hover.show-o {opacity: 1; z-index: 2}
 
-    .affiche-hover, .btn-primary, a, .owl-prev::after, .owl-next::after,  input[type="submit"], #n-film a h3{transition: all 0.3s ease}
+    .affiche-hover, .btn-primary, a, .owl-prev::after, .owl-next::after,  input[type="submit"], #n-film a h3, .btn-retour{transition: all 0.3s ease}
 
     header label{display: none}
 
