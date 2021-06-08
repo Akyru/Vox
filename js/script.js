@@ -38,4 +38,21 @@ $( function(){ // chargement du DOM
       $('#btn-infos i').toggleClass('active');
       $('#sous-menu').toggleClass('show');
     });
-  }); // chargement du DOM
+
+    function myFunction(x) {
+  if (x.matches) { // If media query matches
+    $("#btn-infos").hover(
+      function(){
+      $('#sous-menu').addClass('show');
+    },
+      function(){
+      $('#sous-menu').removeClass('show');
+    });
+}
+
+var x = window.matchMedia("(in-width: 960px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+	}
+
+});

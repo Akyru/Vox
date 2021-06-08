@@ -47,7 +47,7 @@ section{margin: 80px 0}
 header, footer{font-size: 16px}
 
 header{
-  background: green;
+  background: url('../img/vox-motifs_header.png') no-repeat;
   height: 114px;
   padding: 20px 0;
   position: relative;
@@ -98,11 +98,15 @@ width:50%;
 transform: translate(18px,-7px) rotatez(45deg);
 }
 
+#h-desktop{flex-direction: column}
+#logo-burger{width: 302px; margin: 0 auto}
+
 #nav-2{
   flex-direction: column;
+  margin-top: 19px;
   padding: 50px 0 40px;
   display: none;
-  background: #666
+  background: #F6F6F6
 }
   header .rs{margin: 0 auto 40px}
     header .rs i{color: #F15D5B}
@@ -111,13 +115,7 @@ transform: translate(18px,-7px) rotatez(45deg);
 
 #nav-1{
   flex-direction: column;
-  display: none;
-  background: #666;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 328px;
-  margin-top: 40px
+  display: none
 }
 
 #nav-1.show, #nav-2.show{display: flex}
@@ -221,19 +219,20 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
       background: #fff;
       color : #F15D5B;
     }
-    .btn-menu-p{padding: 14px 15%; background: #F15D5B; border: 2px solid #F15D5B; width: 100%; display: block}
-    .btn-menu-p:active{background: #F6F6F6; color: #F15D5B}
-    .btn-menu-s{padding: 14px 15%; background: #F6F6F6; border: 2px solid #F15D5B; color: #F15D5B}
-    .btn-menu-s:active{background: #F15D5B; color: #F6F6F6}
+    .btn-menu-p{padding: 14px 20px; background: #F15D5B; border: 2px solid #F15D5B; width: 100%; display: block}
+    .btn-menu-p:active{background: none; color: #F15D5B}
+    .btn-menu-s{padding: 14px 20px; border: 2px solid #F15D5B; color: #F15D5B}
+    .btn-menu-s:active{background: #F15D5B; color: #fff}
 
     #nav-1 .btn-menu-p{background: #F6F6F6; border: 2px solid #F6F6F6; color: #000}
       #nav-1 .btn-menu-p i{color: #2587DB}
 
-    .btn-sous_menu{width: 80%; margin: 0 auto}
+    .btn-sous_menu{width: 80%; margin: 0 auto; padding: 14px 40px}
     #sous-menu{display: none}
     #sous-menu.show{display: block}
 
-    #btn-infos.active, #btn-infos i.active, #nav-1 .btn-menu-p:active, #nav-1 .btn-menu-p:active i{background: #F15D5B; color: #fff; border: 2px solid #F15D5B}
+    #btn-infos.active, #btn-infos i.active, #nav-1 .btn-menu-p:active{background: #F15D5B; color: #fff; border: 2px solid #F15D5B}
+    #nav-1 .btn-menu-p:active i{color: #fff}
     .btn-hide.hide{display: none !important}
 
     .btn-retour{margin: 0 auto}
@@ -262,8 +261,6 @@ main{background: url('../img/vox-motifs.svg') no-repeat center}
 
 
 @media screen and (min-width:720px) {
-body{background: #949494}
-
 h1{font-size: 40px; line-height: 51px}
 h2{font-size: 30px; line-height: 38px}
 h2::after{font-size: 140px}
@@ -283,12 +280,12 @@ h3{font-size: 24px; line-height: 31px}
 
     #copyright a {display: inline}
 
+#logo-burger {width: 720px}
+
 }
 
 
 @media screen and (min-width:960px) {
-  body{background: #666}
-
   a:hover{color: #F15D5B}
 
   footer a:hover{color: #F15D5B}
@@ -339,26 +336,79 @@ h3{font-size: 24px; line-height: 31px}
     .rs{width: 80px}
       .rs i{font-size: 20px}
 
-    header{justify-content: space-between}
-      header > div{display: inherit !important; flex-basis: 20%; max-width: inherit !important; margin: inherit !important;}
+    header{padding: 20px 0 0; height: inherit}
+
+      #h-desktop{
+        max-width: 1282px;
+        margin: 0 auto;
+        flex-direction: row
+      }
+        #logo-burger{
+          display: inherit;
+          align-items: inherit;
+          justify-content: inherit;
+          width: inherit;
+          margin: inherit
+        }
+
+        header .rs{align-items: center; margin: 0 40px}
+        header .rs a:hover i{color: #000; transition: all 0.3s ease}
 
       #nav-1, #nav-2{display: flex}
       #nav-2{
         flex-basis: 40%;
         flex-direction: row;
-        padding: 0
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        background: inherit
       }
+        #nav-2 .btn-menu-p{margin-left: 20px}
+        #nav-2 .btn-menu-p, #nav-2 .btn-menu-s{
+          width: 174px;
+          height: 56px
+        }
+        #nav-2 .btn-menu-s div{max-width: inherit; justify-content: center}
       header nav{flex-basis: 100%; max-width: 1282px; margin: 0 auto}
 
       #nav-1{
         flex-direction: row;
         top: inherit;
         margin-top: inherit;
-        position: inherit;
-        margin-top: 16px;
+        position: inherit
       }
 
+      #bg-nav{margin-top: 20px; background: #F6F6F6}
+
+      .btn-menu-p{min-width: 140px}
+      .btn-menu-p:hover{background: none; color: #F15D5B}
+
       #newsletter{max-width: 1282px; margin: 80px auto}
+
+        .btn-menu-p div{justify-content: center}
+        #nav-1 .btn-menu-p:hover{background: #F15D5B; color: #fff; border: 2px solid #F15D5B}
+        #nav-1 .btn-menu-p:hover i, .btn-menu-s:hover i{color: #fff}
+
+        .btn-menu-s:hover{background: #F15D5B; color: #fff}
+
+        #btn-infos{position: relative}
+        #btn-infos:hover {background: #F6F6F6 !important; color: #000 !important; border: 2px solid #F6F6F6 !important}
+        #btn-infos:hover i{color: #2587DB !important}
+        #btn-infos::after{
+          content: '';
+          display: block;
+          width: 154px;
+          height: 4px;
+          background: #F15D5B;
+          opacity: 0;
+          transition: all 0.3s ease;
+          position: absolute;
+          bottom: -2px
+        }
+        #btn-infos:hover:after{opacity: 1}
+
+        #sous-menu{visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear}
+        #btn-infos:hover #sous-menu{visibility: visible; opacity: 1}
 }
 
 /* #2587DB */

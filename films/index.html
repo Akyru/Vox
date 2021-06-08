@@ -13,45 +13,107 @@
 
 <body>
 	<header class="flex wrap">
-		<div class="max-width flex between align-center">
-			<a href="../index.html"><img src="../img/vox-logo-1.svg" alt="Logo du Vox" /></a>
+		<div id="h-desktop" class="flex between">
+			<div id="logo-burger" class="flex between align-center">
+				<a href="../index.html"><img src="../img/vox-logo-1.svg" alt="Logo du Vox" /></a>
 
-			<label for="check">
-				<input type="checkbox" id="check" />
-				<span></span>
-				<span></span>
-				<span></span>
-			</label>
-		</div>
-
-		<div id="nav-2" class="flex item-100">
-			<div class="rs flex between">
-				<a href="#"><i class="icon-facebook"></i></a>
-				<a href="#"><i class="icon-instagram"></i></a>
+				<label for="check">
+					<input type="checkbox" id="check" />
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
 			</div>
 
-			<a class="btn-menu-s flex align-center" href="#"><i class="icon-sac_pro"></i>Espace pro</a>
-			<a class="btn-menu-p flex align-center" href="#"><i class="icon-utilisateur"></i>Mon compte</a>
+			<div id="nav-2" class="flex item-100">
+				<div class="rs flex between">
+					<a href="#"><i class="icon-facebook"></i></a>
+					<a href="#"><i class="icon-instagram"></i></a>
+				</div>
+
+				<a class="btn-menu-s" href="#">
+					<div class="max-width flex align-center">
+						<i class="icon-sac_pro"></i>Espace pro
+					</div>
+				</a>
+				<a class="btn-menu-p" href="#">
+					<div class="max-width flex align-center">
+						<i class="icon-utilisateur"></i>Mon compte
+					</div>
+				</a>
+			</div>
 		</div>
 
-		<nav>
-			<ul id="nav-1" class="flex">
-				<li><a class="btn-menu-p btn-hide flex align-center" href="#"><i class="icon-clap"></i>Films</a></li>
-				<li><a class="btn-menu-p btn-hide flex align-center" href="../index.html"><i class="icon-musique"></i>Opéra - Ballet - Comédie Française</a></li>
-				<li><a class="btn-menu-p btn-hide flex align-center" href="../index.html"><i class="icon-sac_ecole"></i>Jeune public</a></li>
-				<li><a class="btn-menu-p btn-hide flex align-center" href="../index.html"><i class="icon-cloche"></i>Casier des profs</a></li>
-				<li><a class="btn-menu-p btn-hide flex align-center" href="../experience_cine_smile/index.html"><i class="icon-film"></i>Expérience ciné smile</a></li>
-				<li>
-					<a id="btn-infos" class="btn-menu-p flex align-center" href="../index.html"><i class="icon-info"></i>Infos pratiques</a>
-					<ul id="sous-menu">
-						<li><a class="btn-menu-p btn-sous_menu" href="../index.html">Tarifs</a></li>
-						<li><a class="btn-menu-p btn-sous_menu" href="../index.html">Plan d'accès & contact</a></li>
-						<li><a class="btn-menu-p btn-sous_menu" href="../index.html">Partenaires</a></li>
-						<li><a class="btn-menu-p btn-sous_menu" href="../index.html">Recrutement</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+		<div id="bg-nav">
+			<nav>
+				<ul id="nav-1" class="flex">
+					<li>
+						<a class="btn-menu-p btn-hide" href="films/index.html">
+							<div class="max-width flex align-center">
+								<i class="icon-clap"></i>Films
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="btn-menu-p btn-hide" href="#">
+							<div class="max-width flex align-center">
+								<i class="icon-musique"></i>Opéra - Ballet - Comédie Française
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="btn-menu-p btn-hide" href="#">
+							<div class="max-width flex align-center">
+								<i class="icon-sac_ecole"></i>Jeune public
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="btn-menu-p btn-hide" href="#">
+							<div class="max-width flex align-center">
+								<i class="icon-cloche"></i>Casier des profs
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="btn-menu-p btn-hide" href="experience_cine_smile/index.html">
+							<div class="max-width flex align-center">
+								<i class="icon-film"></i>Expérience ciné smile
+							</div>
+						</a>
+					</li>
+					<li>
+						<a id="btn-infos" class="btn-menu-p" href="#">
+							<div class="max-width flex align-center">
+								<i class="icon-info"></i>Infos pratiques
+							</div>
+						</a>
+						<ul id="sous-menu">
+							<li>
+								<a class="btn-menu-p btn-sous_menu" href="#">
+									<div class="max-width">Tarifs</div>
+								</a>
+							</li>
+							<li>
+								<a class="btn-menu-p btn-sous_menu" href="#">
+									<div class="max-width">Plan d'accès & contact</div>
+								</a>
+							</li>
+							<li>
+								<a class="btn-menu-p btn-sous_menu" href="#">
+									<div class="max-width">Partenaires</div>
+								</a>
+							</li>
+							<li>
+								<a class="btn-menu-p btn-sous_menu" href="#">
+									<div class="max-width">Recrutement</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
 	<main>
